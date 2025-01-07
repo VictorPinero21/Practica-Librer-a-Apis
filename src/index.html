@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portada - Mi Librería</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> 
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="font-sans bg-gray-50">
@@ -35,8 +36,8 @@
                         Buscar
                     </button>
                 </form>
-                <a href="#" class="text-gray-600 hover:text-gray-800">Mi Cuenta</a>
-                <a href="#" class="text-gray-600 hover:text-gray-800">🛒</a>
+              
+                <a href="./pages/carrito.html" class="text-gray-600 hover:text-gray-800">🛒</a>
             </div>
         </div>
     </header>
@@ -93,87 +94,16 @@
     </section>
 
     <!-- Libros Destacados -->
-    <main id="main" class="container mx-auto px-6 py-8">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6">Libros Destacados</h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            <!-- Libro 1 -->
-            <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="https://via.placeholder.com/200" alt="Libro 1" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <span class="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">Nuevo</span>
-                    <h3 class="text-lg font-semibold text-gray-800 mt-2">Culpa Mía</h3>
-                    <p class="text-sm text-gray-500">Mercedes Ron</p>
-                    <div class="mt-2">
-                        <span class="line-through text-gray-500 text-sm">21,95 €</span>
-                        <span class="text-red-600 font-bold text-lg">20,85 €</span>
-                    </div>
-                    <p class="text-green-600 text-sm mt-1">¡ENVÍO GRATIS!</p>
-                </div>
+   
+        <section id="destacados" class="px-8 py-16">
+            <h2 class="text-2xl font-bold mb-6">Libros Destacados</h2>
+            <div id="libros-destacados" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
             </div>
-
-            <!-- Libro 2 -->
-            <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="https://via.placeholder.com/200" alt="Libro 2" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <span class="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">Nuevo</span>
-                    <h3 class="text-lg font-semibold text-gray-800 mt-2">Culpa Nuestra</h3>
-                    <p class="text-sm text-gray-500">Mercedes Ron</p>
-                    <div class="mt-2">
-                        <span class="line-through text-gray-500 text-sm">21,95 €</span>
-                        <span class="text-red-600 font-bold text-lg">20,85 €</span>
-                    </div>
-                    <p class="text-green-600 text-sm mt-1">¡ENVÍO GRATIS!</p>
-                </div>
-            </div>
-
-            <!-- Libro 3 -->
-            <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="https://via.placeholder.com/200" alt="Libro 3" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <span class="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">Nuevo</span>
-                    <h3 class="text-lg font-semibold text-gray-800 mt-2">Culpa Tuya</h3>
-                    <p class="text-sm text-gray-500">Mercedes Ron</p>
-                    <div class="mt-2">
-                        <span class="line-through text-gray-500 text-sm">21,95 €</span>
-                        <span class="text-red-600 font-bold text-lg">20,85 €</span>
-                    </div>
-                    <p class="text-green-600 text-sm mt-1">¡ENVÍO GRATIS!</p>
-                </div>
-            </div>
-
-            <!-- Libro 4 -->
-            <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="https://via.placeholder.com/200" alt="Libro 4" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <span class="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">Nuevo</span>
-                    <h3 class="text-lg font-semibold text-gray-800 mt-2">Trilogía Culpables</h3>
-                    <p class="text-sm text-gray-500">Mercedes Ron</p>
-                    <div class="mt-2">
-                        <span class="line-through text-gray-500 text-sm">62,96 €</span>
-                        <span class="text-red-600 font-bold text-lg">59,81 €</span>
-                    </div>
-                    <p class="text-green-600 text-sm mt-1">¡ENVÍO GRATIS!</p>
-                </div>
-            </div>
-
-            <!-- Libro 5 -->
-            <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src="https://via.placeholder.com/200" alt="Libro 5" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <span class="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">Nuevo</span>
-                    <h3 class="text-lg font-semibold text-gray-800 mt-2">Culpa Tuya (Película)</h3>
-                    <p class="text-sm text-gray-500">Mercedes Ron</p>
-                    <div class="mt-2">
-                        <span class="line-through text-gray-500 text-sm">11,95 €</span>
-                        <span class="text-red-600 font-bold text-lg">11,35 €</span>
-                    </div>
-                    <p class="text-green-600 text-sm mt-1">¡ENVÍO GRATIS!</p>
-                </div>
-            </div>
-        </div>
-    </main>
-    <main id="main"></main>
+          </section>
+          
+  
+   
     <!-- Pie de página -->
     <footer class="bg-gray-800 text-white py-6">
         <div class="container mx-auto px-6 text-center">
