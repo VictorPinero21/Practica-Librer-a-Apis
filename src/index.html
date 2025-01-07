@@ -3,18 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portada - Mi Librería</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="container">
-        <form action="../conexion_api.js" method="post">
- <input type="text" placeholder="Selecciona un Libro..." id="Libro">
+<body class="font-sans bg-gray-50">
+  <!--Encabezado-->
+    <header class="bg-white border-b shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-lg font-bold text-gray-800">Casa del Libro</a>
+                <nav class="space-x-4 text-sm text-gray-600">
+                    <a href="#" class="hover:underline">Imprescindibles</a>
+                    <a href="#" class="hover:underline">Ficción</a>
+                    <a href="#" class="hover:underline">Juvenil</a>
+                    <a href="#" class="hover:underline">Cómic y Manga</a>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4">
+                <!-- Formulario de búsqueda -->
+                <form id="searchForm" class="flex items-center space-x-2">
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Busca por autor, título o género"
+                        class="border rounded-md px-3 py-2 w-64 focus:outline-none focus:ring focus:ring-green-400"
+                    />
+                    <button
+                        type="submit"
+                        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+                    >
+                        Buscar
+                    </button>
+                </form>
+                <a href="#" class="text-gray-600 hover:text-gray-800">Mi Cuenta</a>
+                <a href="#" class="text-gray-600 hover:text-gray-800">🛒</a>
+            </div>
+        </div>
+    </header>
+    
 
-        </form>
-    </div>
-    <main id="main">
+    <!-- Hero Section -->
+    <section class="bg-cover bg-center h-96 text-white flex items-center justify-center" style="background-image: url('assets/imagenes/foto.avif');">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold mb-4">Bienvenidos a Mi Librería</h1>
+            <p class="text-lg">Explora los mejores libros y descubre tu próxima gran lectura.</p>
+            <a href="#libros" class="mt-6 inline-block bg-pink-600 text-white font-bold py-2 px-6 rounded hover:bg-pink-700">Ver Libros</a>
+        </div>
+    </section>
 
-        <!--Aqui va los libros-->
+    <!-- Categorías Destacadas -->
+    <section class="container mx-auto px-6 py-8 ">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">Categorías destacadas</h2>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            <!-- Categoría 1 -->
+            <div class="flex flex-col items-center">
+                <img src="https://via.placeholder.com/100" alt="Contemporánea" class="w-24 h-24 rounded-full object-cover">
+                <p class="mt-2 text-pink-600 font-medium">Contemporánea</p>
+            </div>
+
+            <!-- Categoría 2 -->
+            <div class="flex flex-col items-center">
+                <img src="https://via.placeholder.com/100" alt="Juvenil" class="w-24 h-24 rounded-full object-cover">
+                <p class="mt-2 text-pink-600 font-medium">Juvenil</p>
+            </div>
+
+            <!-- Categoría 3 -->
+            <div class="flex flex-col items-center">
+                <img src="https://via.placeholder.com/100" alt="Infantil" class="w-24 h-24 rounded-full object-cover">
+                <p class="mt-2 text-pink-600 font-medium">Infantil</p>
+            </div>
+
+            <!-- Categoría 4 -->
+            <div class="flex flex-col items-center">
+                <img src="https://via.placeholder.com/100" alt="Autoayuda" class="w-24 h-24 rounded-full object-cover">
+                <p class="mt-2 text-pink-600 font-medium">Autoayuda</p>
+            </div>
+
+            <!-- Categoría 5 -->
+            <div class="flex flex-col items-center">
+                <img src="https://via.placeholder.com/100" alt="Ciencias" class="w-24 h-24 rounded-full object-cover">
+                <p class="mt-2 text-pink-600 font-medium">Ciencias</p>
+            </div>
+        </div>
+
+        <div class="text-center mt-6">
+            <a href="#" class="inline-block bg-yellow-500 text-white font-bold py-2 px-6 rounded hover:bg-yellow-600">Ver más temáticas</a>
+        </div>
+    </section>
+
+    <!-- Libros Destacados -->
+    <main id="main" class="container mx-auto px-6 py-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">Libros Destacados</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            <!-- Libro 1 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="https://via.placeholder.com/200" alt="Libro 1" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <span class="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">Nuevo</span>
+                    <h3 class="text-lg font-semibold text-gray-800 mt-2">Culpa Mía</h3>
+                    <p class="text-sm text-gray-500">Mercedes Ron</p>
+                    <div class="mt-2">
+                        <span class="line-through text-gray-500 text-sm">21,95 €</span>
+                        <span class="text-red-600 font-bold text-lg">20,85 €</span>
+                    </div>
+                    <p class="text-green-600 text-sm mt-1">¡ENVÍO GRATIS!</p>
+                </div>
+            </div>
+
+            <!-- Libro 2 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="https://via.placeholder.com/200" alt="Libro 2" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <span class="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">Nuevo</span>
+                    <h3 class="text-lg font-semibold text-gray-800 mt-2">Culpa Nuestra</h3>
+                    <p class="text-sm text-gray-500">Mercedes Ron</p>
+                    <div class="mt-2">
+                        <span class="line-through text-gray-500 text-sm">21,95 €</span>
+                        <span class="text-red-600 font-bold text-lg">20,85 €</span>
+                    </div>
+                    <p class="text-green-600 text-sm mt-1">¡ENVÍO GRATIS!</p>
+                </div>
+            </div>
+
+            <!-- Libro 3 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="https://via.placeholder.com/200" alt="Libro 3" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <span class="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">Nuevo</span>
+                    <h3 class="text-lg font-semibold text-gray-800 mt-2">Culpa Tuya</h3>
+                    <p class="text-sm text-gray-500">Mercedes Ron</p>
+                    <div class="mt-2">
+                        <span class="line-through text-gray-500 text-sm">21,95 €</span>
+                        <span class="text-red-600 font-bold text-lg">20,85 €</span>
+                    </div>
+                    <p class="text-green-600 text-sm mt-1">¡ENVÍO GRATIS!</p>
+                </div>
+            </div>
+
+            <!-- Libro 4 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="https://via.placeholder.com/200" alt="Libro 4" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <span class="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">Nuevo</span>
+                    <h3 class="text-lg font-semibold text-gray-800 mt-2">Trilogía Culpables</h3>
+                    <p class="text-sm text-gray-500">Mercedes Ron</p>
+                    <div class="mt-2">
+                        <span class="line-through text-gray-500 text-sm">62,96 €</span>
+                        <span class="text-red-600 font-bold text-lg">59,81 €</span>
+                    </div>
+                    <p class="text-green-600 text-sm mt-1">¡ENVÍO GRATIS!</p>
+                </div>
+            </div>
+
+            <!-- Libro 5 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="https://via.placeholder.com/200" alt="Libro 5" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <span class="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">Nuevo</span>
+                    <h3 class="text-lg font-semibold text-gray-800 mt-2">Culpa Tuya (Película)</h3>
+                    <p class="text-sm text-gray-500">Mercedes Ron</p>
+                    <div class="mt-2">
+                        <span class="line-through text-gray-500 text-sm">11,95 €</span>
+                        <span class="text-red-600 font-bold text-lg">11,35 €</span>
+                    </div>
+                    <p class="text-green-600 text-sm mt-1">¡ENVÍO GRATIS!</p>
+                </div>
+            </div>
+        </div>
     </main>
+    <main id="main"></main>
+    <!-- Pie de página -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-sm">© 2024 Mi Librería. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+  <script src="../conexion_api.js"></script>
 </body>
 </html>
