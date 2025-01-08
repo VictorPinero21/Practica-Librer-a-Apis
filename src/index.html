@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portada - Mi Librería</title>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> 
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="font-sans bg-gray-50">
@@ -22,20 +22,28 @@
             </div>
             <div class="flex items-center space-x-4">
                 <!-- Formulario de búsqueda -->
-                <form id="searchForm" class="flex items-center space-x-2">
-                    <input
-                        type="text"
-                        id="searchInput"
-                        placeholder="Busca por autor, título o género"
-                        class="border rounded-md px-3 py-2 w-64 focus:outline-none focus:ring focus:ring-green-400"
-                    />
-                    <button
-                        type="submit"
-                        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-                    >
-                        Buscar
-                    </button>
-                </form>
+                <form
+                id="searchForm"
+                class="flex items-center space-x-2"
+                action="pages/ficha.html"
+                onsubmit="storeSearchTerm()"
+            >
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Busca por autor, título o género"
+                    class="border rounded-md px-3 py-2 w-64 focus:outline-none focus:ring focus:ring-green-400"
+                />
+                <button
+                    type="submit"
+                    class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+                >
+                    Buscar
+                </button>
+            </form>
+            
+          
+            
               
                 <a href="./pages/carrito.html" class="text-gray-600 hover:text-gray-800">🛒</a>
             </div>

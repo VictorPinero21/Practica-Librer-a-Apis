@@ -79,6 +79,56 @@ function guardarFavorito(id, titulo) {
 }
 
 
+function storeSearchTerm() {
+    const searchInput = document.getElementById("searchInput").value.trim();
+    if (searchInput) {
+        localStorage.setItem("searchTerm", searchInput);
+    }
+}
+
+
 
 // Llamar a la función al cargar la página
 document.addEventListener('DOMContentLoaded', obtenerLibrosDestacados);
+document.addEventListener("DOMContentLoaded", async () => {
+    // Obtener el término de búsqueda del localStorage
+    const searchTerm = localStorage.getItem("searchTerm");
+    if (!searchTerm) {
+      alert("No hay términos de búsqueda disponibles.");
+      window.location.href = "index.html"; // Redirigir si no hay término
+      return;
+    }
+  
+    try {
+      // Llamada a la API de Google Books
+      const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${searchTerm}`);
+      const data = await response.json();
+  
+      if (data.items && data.items.length > 0) {
+        // Tomar el primer libro de los resultados
+        const book = data.items[0].volumeInfo;
+  
+        // Rellenar los elementos del DOM
+        const titulo = document.getElementById("titulo");
+        const autor = document.getElementById("autor");
+        const precio = document.getElementById("precio");
+        const descripcion = document.getElementById("descripcion");
+        const imagen = document.querySelector("img");
+  
+        titulo.textContent = book.title || "Título no disponible";
+        autor.textContent = book.authors ? book.authors.join(", ") : "Autor no disponible";
+        precio.textContent = book.publishedDate || "Precio no disponible"; // Modifica esto si hay datos de precio en la API
+        descripcion.textContent = book.description || "Descripción no disponible";
+        imagen.src = book.imageLinks?.thumbnail || "https://via.placeholder.com/300";
+        imagen.alt = book.title || "Imagen no disponible";
+  
+      } else {
+        alert("No se encontraron resultados para la búsqueda.");
+        window.location.href = "index.html"; // Redirigir si no hay resultados
+      }
+    } catch (error) {
+      console.error("Error al buscar detalles del libro:", error);
+      alert("Ocurrió un error al buscar el libro. Intenta de nuevo.");
+    }
+  });
+  
