@@ -64,14 +64,33 @@
    
 
     <!-- Libros Destacados -->
-   
-        <section id="destacados" class="px-8 py-16">
-            <h2 class="text-2xl font-bold mb-6">Libros Destacados</h2>
-            <div id="libros-destacados" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            
-            </div>
-          </section>
-          
+    <section id="filtros" class="px-8 py-4">
+        <h2 class="text-xl font-bold mb-4">Filtrar Libros</h2>
+        <form id="filtro-form" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="categoria" class="block text-sm font-medium text-gray-700">Categoría</label>
+            <select id="categoria" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+              <option value="programación">Programación</option>
+              <option value="cuentos">Cuentos</option>
+              <option value="ficción">Ficción</option>
+              <option value="historia">Historia</option>
+            </select>
+          </div>
+          <div>
+            <label for="anio" class="block text-sm font-medium text-gray-700">Año de Publicación</label>
+            <input type="number" id="anio" placeholder="2022" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+          </div>
+          <div class="sm:col-span-2">
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Buscar</button>
+          </div>
+        </form>
+      </section>
+      
+      <section id="destacados" class="px-8 py-16">
+        <h2 class="text-2xl font-bold mb-6">Libros Destacados</h2>
+        <div id="libros-destacados" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+      </section>
+      
   
    
     <!-- Pie de página -->
@@ -81,5 +100,6 @@
         </div>
     </footer>
   <script src="../conexion_api.js"></script>
+  <script src="../conexion_api2.js"></script>
 </body>
 </html>
